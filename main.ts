@@ -33,6 +33,13 @@ input.onButtonPressed(Button.A, function () {
         `)
 })
 input.onButtonPressed(Button.B, function () {
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
     music.playMelody("C5 A B G A F G E ", 120)
     basic.pause(2000)
     music.playMelody("E G F A G B A C5 ", 120)
