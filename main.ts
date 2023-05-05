@@ -32,6 +32,20 @@ input.onButtonPressed(Button.A, function () {
         . . # . .
         `)
 })
+input.onButtonPressed(Button.AB, function () {
+    music.playTone(147, music.beat(BeatFraction.Eighth))
+    music.rest(music.beat(BeatFraction.Sixteenth))
+    music.playTone(147, music.beat(BeatFraction.Eighth))
+    music.rest(music.beat(BeatFraction.Sixteenth))
+    music.playTone(147, music.beat(BeatFraction.Eighth))
+    music.playTone(196, music.beat(BeatFraction.Half))
+    music.rest(music.beat(BeatFraction.Sixteenth))
+    music.playTone(587, music.beat(BeatFraction.Half))
+    music.rest(music.beat(BeatFraction.Sixteenth))
+    music.playTone(523, music.beat(BeatFraction.Eighth))
+    music.playTone(494, music.beat(BeatFraction.Eighth))
+    music.playTone(440, music.beat(BeatFraction.Eighth))
+})
 input.onButtonPressed(Button.B, function () {
     basic.showLeds(`
         . . . . .
@@ -43,6 +57,7 @@ input.onButtonPressed(Button.B, function () {
     music.playMelody("C5 A B G A F G E ", 120)
     basic.pause(2000)
     music.playMelody("E G F A G B A C5 ", 120)
+    basic.showString("A+B")
 })
 basic.showString("presse A")
 basic.showLeds(`
